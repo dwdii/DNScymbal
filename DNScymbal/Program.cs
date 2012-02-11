@@ -14,7 +14,7 @@ namespace DNScymbal
         static void Main()
         {
             // Local Variables
-            bool bIsService = false;
+            bool bIsService = IsService();
 
             // Are we a genuine service?
             if (bIsService)
@@ -30,7 +30,24 @@ namespace DNScymbal
             {
                 DnsCymbalUpdater dcu = new DnsCymbalUpdater();
                 dcu.Start();
+
+                TrayIcon ti = new TrayIcon(dcu);
+                ti.ShowDialog();
             }
+        }
+
+        static bool IsService()
+        {
+            ServiceController[] svcs = ServiceController.GetServices();
+            foreach (ServiceController svc in svcs)
+            {
+                if (svc.ServiceName == "DNScymbal")
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

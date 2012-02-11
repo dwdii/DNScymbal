@@ -21,6 +21,7 @@ namespace DNScymbal
         internal void Stop()
         {
             _stopEvent.Set();
+            System.Threading.Thread.Sleep(2000);
         }
 
         private static void MainSvcThread()
