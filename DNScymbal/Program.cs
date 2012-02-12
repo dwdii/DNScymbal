@@ -19,15 +19,17 @@ namespace DNScymbal
             // Are we a genuine service?
             if (bIsService)
             {
+                // Run the service 
                 ServiceBase[] ServicesToRun;
                 ServicesToRun = new ServiceBase[] 
-			{ 
-				new MainService() 
-			};
+			    { 
+				    new MainService() 
+			    };
                 ServiceBase.Run(ServicesToRun);
             }
             else
             {
+                // Run in interactive mode...
                 DnsCymbalUpdater dcu = new DnsCymbalUpdater();
                 dcu.Start();
 

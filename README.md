@@ -15,4 +15,4 @@ Use the DNSimple web interface to create the initial A record.
 The DNScymbal app will automatically use the jsonip.com service to get your public IP address
 and post this IP to the specified record on the specified domain.
 
-DNScymbal uses the [DNSimple-csharp](https://github.com/anderly/dnsimple-csharp) API via NuGet.
+DNScymbal uses the [DNSimple-csharp](https://github.com/anderly/dnsimple-csharp) API via NuGet as well as [JsonFx](https://github.com/jsonfx/jsonfx).

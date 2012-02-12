@@ -11,6 +11,7 @@ namespace DNScymbal
     {
         NotifyIcon _notifyIcon;
         ContextMenu _contextMenu;
+        private Label label1;
         DnsCymbalUpdater _dcu;
 
         public TrayIcon(DnsCymbalUpdater dcu)
@@ -52,6 +53,10 @@ namespace DNScymbal
         {
             try
             {
+                ConfigSettings cs = new ConfigSettings();
+
+                cs.Save();
+
                 _dcu.Stop();
 
                 _notifyIcon.Visible = false;
@@ -68,5 +73,28 @@ namespace DNScymbal
             MessageBox.Show(e.Message, _notifyIcon.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(302, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "This form is a placeholder to enable the Tray Icon functionality.";
+            // 
+            // TrayIcon
+            // 
+            this.ClientSize = new System.Drawing.Size(348, 110);
+            this.Controls.Add(this.label1);
+            this.Name = "TrayIcon";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
     }
 }
