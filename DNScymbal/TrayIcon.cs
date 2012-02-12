@@ -23,7 +23,8 @@ namespace DNScymbal
         private void Init()
         {
             _contextMenu = new ContextMenu();
-            _contextMenu.MenuItems.Add(0, new MenuItem("Exit", new System.EventHandler(Exit_Click)));
+            _contextMenu.MenuItems.Add(0, new MenuItem("Properties", new System.EventHandler(Properties_Click)));
+            _contextMenu.MenuItems.Add(1, new MenuItem("Exit", new System.EventHandler(Exit_Click)));
 
             _notifyIcon = new NotifyIcon();
             _notifyIcon.Text = "DNScymbal";
@@ -61,6 +62,22 @@ namespace DNScymbal
 
                 _notifyIcon.Visible = false;
                 this.Close();
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex);
+            }
+        }
+
+        private void Properties_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ConfigurationForm frm = new ConfigurationForm();
+                if (DialogResult.OK == frm.ShowDialog())
+                {
+
+                }
             }
             catch (Exception ex)
             {

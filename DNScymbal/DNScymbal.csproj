@@ -96,6 +96,12 @@
     <Compile Include="TrayIcon.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -107,6 +113,12 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrayIcon.resx">
+      <DependentUpon>TrayIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ConfigurationForm.resx">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
