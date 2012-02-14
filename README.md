@@ -1,16 +1,15 @@
 DNSimple Record Updater Windows .Net Tray app / Service
 =======================================================
-Currently just a crude tray app with manual config via the app.config.
+A simple Windows tray app with a property sheet for configuration:
 
+    EmailAddress: your DNSimple email address
+    Password: your DNSimple password
+    Domain: yourdomain.com
+    Record ID: Record Id of the DNS record to update
+    Record Name: Name of the DNS Record to be updated
+    Update Frequency: Interval in minutes between updates.
 
-    <add key="EmailAddress" value="<your DNSimple email address>"/>
-    <add key="Password" value="<your DNSimple password>"/>
-    <add key="Domain" value="yourdomain.com"/>
-    <add key="RecordId" value="<Record Id of record to update>"/>
-    <add key="RecordName" value="<Name of Record>"/>
-    <add key="UpdateFrequencyMinutes" value="60"/>
-
-Use the DNSimple web interface to create the initial A record. 
+Use the DNSimple web interface to create the initial A record and then allow the DNScymbal to maintain it according to your public IP.
 
 The DNScymbal app will automatically use the jsonip.com service to get your public IP address
 and post this IP to the specified record on the specified domain.
