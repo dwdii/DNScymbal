@@ -13,6 +13,8 @@ namespace DNScymbal
     {
         const string Str_PwordUnchanged = "PASSWORD_UNCHANGED";
 
+        ConfigSettings _config = new ConfigSettings();
+
         public ConfigurationForm()
         {
             InitializeComponent();
@@ -22,13 +24,17 @@ namespace DNScymbal
         {
             try
             {
-                ConfigSettings config = new ConfigSettings();
 
                 // Show the config we currently have...
-                if (config.RecordUpdateRequests.Count > 0)
+                if (_config.RecordUpdateRequests.Count > 0)
                 {
-                    _txtEmailAddr.Text = config.RecordUpdateRequests[0].EmailAddress;
+                    RecordUpdateRequest theRur = _config.RecordUpdateRequests[0];
+                    _txtEmailAddr.Text = theRur.EmailAddress;
                     _txtPassword.Text = Str_PwordUnchanged;
+                    _txtDomain.Text = theRur.Domain;
+                    _txtRecordId.Text = theRur.RecordId.ToString();
+                    _txtRecordName.Text = theRur.RecordName;
+                    _txtUpdateFreq.Text = theRur.UpdateFrequencyMinutes.ToString();
                 }
             }
             catch (Exception ex)
@@ -37,9 +43,42 @@ namespace DNScymbal
             }
         }
 
+        private void _btnOk_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RecordUpdateRequest theRur = _config.RecordUpdateRequests[0];
+
+                theRur.EmailAddress = _txtEmailAddr.Text;
+                if (_txtPassword.Text != Str_PwordUnchanged)
+                {
+                    theRur.Password = _txtPassword.Text;
+                }
+                theRur.Domain = _txtDomain.Text;
+                theRur.RecordId = Convert.ToInt32(_txtRecordId.Text);
+                theRur.RecordName = _txtRecordName.Text;
+                theRur.UpdateFrequencyMinutes = Convert.ToInt32(_txtUpdateFreq.Text);
+
+                // Save the config
+                _config.Save();
+
+                // Close the form
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex);
+            }
+        }
+
+        #region Private Metehods
+
         private void HandleException(Exception ex)
         {
             MessageBox.Show(this, ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        #endregion
+
     }
 }
