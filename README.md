@@ -14,4 +14,12 @@ Use the DNSimple web interface to create the initial A record and then allow the
 The DNScymbal app will automatically use the [jsonip.com](http://jsonip.com/) service to get your public IP address
 and post this IP to the specified record on the specified domain.
 
-DNScymbal uses the [DNSimple-csharp](https://github.com/anderly/dnsimple-csharp) API via NuGet as well as [JsonFx](https://github.com/jsonfx/jsonfx).
+Development Environment
+=======================
+DNScymbal is a Visual Studio 2010 solution which uses the [DNSimple-csharp](https://github.com/anderly/dnsimple-csharp) API via NuGet 
+as well as [JsonFx](https://github.com/jsonfx/jsonfx).
+
+Testing
+=======
+Only lite manual testing on Windows 7 Home Premium has been performed. The .Net Framework v4 Client Profile is required.
+
