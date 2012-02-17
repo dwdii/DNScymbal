@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ServiceProcess;
 using System.Text;
+using System.Windows.Forms;
 
 namespace DNScymbal
 {
@@ -29,6 +30,9 @@ namespace DNScymbal
             }
             else
             {
+                // Turn on visual styling
+                Application.EnableVisualStyles();
+
                 // Run in interactive mode...
                 DnsCymbalUpdater dcu = new DnsCymbalUpdater();
                 dcu.Start();
