@@ -4,57 +4,91 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using DNSimple;
+using System.Windows.Forms;
 
 namespace DNScymbal
 {
     class DnsCymbalUpdater
     {
-        Thread _mainThread = new System.Threading.Thread(new System.Threading.ThreadStart(MainSvcThread));
+        Thread _mainThread = null;
         static ManualResetEvent _stopEvent = new ManualResetEvent(false);
-        static ConfigSettings _configSettings = new ConfigSettings();
 
         internal void Start()
         {
             _stopEvent.Reset();
+
+            _mainThread = new System.Threading.Thread(new System.Threading.ThreadStart(MainSvcThread));
             _mainThread.Start();
         }
 
         internal void Stop()
         {
             _stopEvent.Set();
-            System.Threading.Thread.Sleep(2000);
+            if (!_mainThread.Join(10000))
+            {
+                _mainThread.Abort();
+            }
+        }
+
+        internal void Restart()
+        {
+            this.Stop();
+            this.Start();
         }
 
         private static void MainSvcThread()
         {
-            List<RecordUpdateRequest> Rurs = _configSettings.RecordUpdateRequests;
-
-            // Loop until we are stopping
-            while (!_stopEvent.WaitOne(1000))
+            try
             {
-                foreach(RecordUpdateRequest rur in Rurs)
+                // Loop until we are stopping
+                while (!_stopEvent.WaitOne(1000))
                 {
-                    rur.Validate();
-
-                    // Check if it is time to update...
-                    bool bUpdate = true;
-                    if (rur.LastUpdated.HasValue)
+                    ConfigSettings configSettings = new ConfigSettings();
+                    foreach (RecordUpdateRequest rur in configSettings.RecordUpdateRequests)
                     {
-                        TimeSpan ts = DateTime.Now.Subtract(rur.LastUpdated.Value);
-                        bUpdate = ts.TotalMinutes >= rur.UpdateFrequencyMinutes;
-                    }
-
-                    // Update?
-                    if (bUpdate)
-                    {
-                        DNSimple.DNSimpleRestClient c = new DNSimpleRestClient(rur.EmailAddress, rur.Password);
-
-                        rur.RecordContent = GetPublicIP();
-                        c.UpdateRecord(rur.Domain, rur.RecordId, rur.RecordName, rur.RecordContent);
-                        rur.LastUpdated = DateTime.Now;
+                        UpdateRecordIfNeeded(rur);
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                HandleException(ex);
+            }
+        }
+
+        private static void UpdateRecordIfNeeded(RecordUpdateRequest rur)
+        {
+            try
+            {
+                rur.Validate();
+
+                // Check if it is time to update...
+                bool bUpdate = true;
+                if (rur.LastUpdated.HasValue)
+                {
+                    TimeSpan ts = DateTime.Now.Subtract(rur.LastUpdated.Value);
+                    bUpdate = ts.TotalMinutes >= rur.UpdateFrequencyMinutes;
+                }
+
+                // Update?
+                if (bUpdate)
+                {
+                    DNSimple.DNSimpleRestClient c = new DNSimpleRestClient(rur.EmailAddress, rur.Password);
+
+                    rur.RecordContent = GetPublicIP();
+                    c.UpdateRecord(rur.Domain, rur.RecordId, rur.RecordName, rur.RecordContent);
+                    rur.LastUpdated = DateTime.Now;
+                }
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex);
+            }
+        }
+
+        private static void HandleException(Exception ex)
+        {
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private static string GetPublicIP()

@@ -63,6 +63,7 @@ namespace DNScymbal
                 _config.Save();
 
                 // Close the form
+                this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)

@@ -54,12 +54,10 @@ namespace DNScymbal
         {
             try
             {
-                ConfigSettings cs = new ConfigSettings();
-
-                cs.Save();
-
+                // Stop the updater thread
                 _dcu.Stop();
 
+                // Hide the tray icon and close
                 _notifyIcon.Visible = false;
                 this.Close();
             }
@@ -76,7 +74,8 @@ namespace DNScymbal
                 ConfigurationForm frm = new ConfigurationForm();
                 if (DialogResult.OK == frm.ShowDialog())
                 {
-
+                    // Restart the updater to ensure any changes are applied.
+                    _dcu.Restart();
                 }
             }
             catch (Exception ex)
