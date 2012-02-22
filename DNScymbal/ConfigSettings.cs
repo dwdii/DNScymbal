@@ -30,6 +30,7 @@ namespace DNScymbal
                     rur.RecordId = Convert.ToInt32(_config.AppSettings.Settings["RecordId"].Value);
                     rur.RecordName = _config.AppSettings.Settings["RecordName"].Value;
                     rur.UpdateFrequencyMinutes = Convert.ToInt32(_config.AppSettings.Settings["UpdateFrequencyMinutes"].Value);
+                    rur.IpAddressType = _config.AppSettings.Settings["IpAddressType"].Value;
                     rur.LastUpdated = null;
 
                     // Add to list.

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableGeneral = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this._txtEmailAddr = new System.Windows.Forms.TextBox();
             this._txtPassword = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableDnsRecord = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this._txtRecordName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,13 +56,15 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this._btnOk = new System.Windows.Forms.Button();
             this._btnCancel = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this._cbIpAddress = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableGeneral.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.tableDnsRecord.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -80,18 +82,18 @@
             // 
             // tabGeneral
             // 
-            this.tabGeneral.Controls.Add(this.tableLayoutPanel2);
+            this.tabGeneral.Controls.Add(this.tableGeneral);
             resources.ApplyResources(this.tabGeneral, "tabGeneral");
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel2
+            // tableGeneral
             // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            resources.ApplyResources(this.tableGeneral, "tableGeneral");
+            this.tableGeneral.Controls.Add(this.groupBox1, 0, 0);
+            this.tableGeneral.Controls.Add(this.groupBox2, 0, 1);
+            this.tableGeneral.Controls.Add(this.groupBox3, 0, 2);
+            this.tableGeneral.Name = "tableGeneral";
             // 
             // groupBox1
             // 
@@ -132,21 +134,23 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tableLayoutPanel5);
+            this.groupBox2.Controls.Add(this.tableDnsRecord);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // tableLayoutPanel5
+            // tableDnsRecord
             // 
-            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
-            this.tableLayoutPanel5.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this._txtRecordName, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this._txtRecordId, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label7, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this._txtDomain, 1, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            resources.ApplyResources(this.tableDnsRecord, "tableDnsRecord");
+            this.tableDnsRecord.Controls.Add(this.label4, 0, 2);
+            this.tableDnsRecord.Controls.Add(this._txtRecordName, 1, 2);
+            this.tableDnsRecord.Controls.Add(this.label3, 0, 1);
+            this.tableDnsRecord.Controls.Add(this._txtRecordId, 1, 1);
+            this.tableDnsRecord.Controls.Add(this.label7, 0, 0);
+            this.tableDnsRecord.Controls.Add(this._txtDomain, 1, 0);
+            this.tableDnsRecord.Controls.Add(this.label8, 0, 3);
+            this.tableDnsRecord.Controls.Add(this._cbIpAddress, 1, 3);
+            this.tableDnsRecord.Name = "tableDnsRecord";
             // 
             // label4
             // 
@@ -242,6 +246,20 @@
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // _cbIpAddress
+            // 
+            resources.ApplyResources(this._cbIpAddress, "_cbIpAddress");
+            this._cbIpAddress.DropDownHeight = 200;
+            this._cbIpAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cbIpAddress.DropDownWidth = 350;
+            this._cbIpAddress.FormattingEnabled = true;
+            this._cbIpAddress.Name = "_cbIpAddress";
+            // 
             // ConfigurationForm
             // 
             this.AcceptButton = this._btnOk;
@@ -256,13 +274,13 @@
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabGeneral.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableGeneral.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
+            this.tableDnsRecord.ResumeLayout(false);
+            this.tableDnsRecord.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
@@ -279,7 +297,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabGeneral;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableGeneral;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button _btnOk;
         private System.Windows.Forms.Button _btnCancel;
@@ -290,7 +308,7 @@
         private System.Windows.Forms.TextBox _txtEmailAddr;
         private System.Windows.Forms.TextBox _txtPassword;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableDnsRecord;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox _txtRecordName;
@@ -303,5 +321,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox _txtDomain;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox _cbIpAddress;
     }
 }

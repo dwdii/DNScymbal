@@ -40,10 +40,11 @@ namespace DNScymbal
         {
             try
             {
+                ConfigSettings configSettings = new ConfigSettings();
+
                 // Loop until we are stopping
                 while (!_stopEvent.WaitOne(1000))
                 {
-                    ConfigSettings configSettings = new ConfigSettings();
                     foreach (RecordUpdateRequest rur in configSettings.RecordUpdateRequests)
                     {
                         UpdateRecordIfNeeded(rur);
@@ -91,7 +92,7 @@ namespace DNScymbal
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private static string GetPublicIP()
+        public static string GetPublicIP()
         {
             dynamic oIP = null;
             using (System.Net.WebClient wc = new System.Net.WebClient())

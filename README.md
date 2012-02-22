@@ -2,6 +2,8 @@ DNSimple Record Updater Windows .Net Tray app / Service
 =======================================================
 A simple Windows tray app with a property sheet for configuration:
 
+![DNScymbal Properties](/readme/DnsCymbalProperties.png "DNScymbal Properties")
+
     EmailAddress: your DNSimple email address
     Password: your DNSimple password
     Domain: yourdomain.com

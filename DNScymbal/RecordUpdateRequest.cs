@@ -15,6 +15,7 @@ namespace DNScymbal
         public string RecordName { get; set; }
         public int UpdateFrequencyMinutes { get; set; }
         public DateTime? LastUpdated { get; set; }
+        public string IpAddressType { get; set; }
 
         /// <summary>
         /// Performs a cursory validation of this record update request.
@@ -27,5 +28,11 @@ namespace DNScymbal
                 throw new ArgumentException("Email Address must contain the DNSimple email address of the account holder.", "Email Address");
             }
         }
+
+        public class IpAddressTypes
+        {
+            public const string JsonIp = "JsonIp.com";
+        }
+
     }
 }

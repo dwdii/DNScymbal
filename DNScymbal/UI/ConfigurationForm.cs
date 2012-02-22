@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace DNScymbal
 {
@@ -24,6 +26,8 @@ namespace DNScymbal
         {
             try
             {
+                
+
 
                 // Show the config we currently have...
                 if (_config.RecordUpdateRequests.Count > 0)
@@ -35,11 +39,42 @@ namespace DNScymbal
                     _txtRecordId.Text = theRur.RecordId.ToString();
                     _txtRecordName.Text = theRur.RecordName;
                     _txtUpdateFreq.Text = theRur.UpdateFrequencyMinutes.ToString();
+                    LoadIpAddressCb(theRur);
+                }
+                else
+                {
+                    LoadIpAddressCb(null);
                 }
             }
             catch (Exception ex)
             {
                 HandleException(ex);
+            }
+        }
+
+        private void LoadIpAddressCb(RecordUpdateRequest theRur)
+        {
+            string strJsonIp = string.Format("Dynamic/Public (JSONIP.com) / {0}", DnsCymbalUpdater.GetPublicIP());
+            NetworkInterface[] nics = NetworkInterface.GetAllNetworkInterfaces();
+            foreach (NetworkInterface nic in nics)
+            {
+                if (nic.NetworkInterfaceType == NetworkInterfaceType.Loopback)
+                {
+                    // Skip
+                }
+                else if(nic.OperationalStatus == OperationalStatus.Up && nic.Speed > 0)
+                {
+                    _cbIpAddress.Items.Add(new IpAddressOption(nic));
+                }
+            }
+
+            // Add JSONIP dynamic option
+            _cbIpAddress.Items.Add(strJsonIp);
+
+            // JSONIP.com option selected?
+            if (null != theRur && theRur.IpAddressType == RecordUpdateRequest.IpAddressTypes.JsonIp)
+            {
+                _cbIpAddress.SelectedItem = strJsonIp;
             }
         }
 
@@ -80,6 +115,31 @@ namespace DNScymbal
         }
 
         #endregion
+
+        class IpAddressOption
+        {
+            public NetworkInterface Nic {get; private set;}
+
+            internal IpAddressOption(NetworkInterface nic)
+            {
+                Nic = nic;
+            }
+
+            public override string ToString()
+            {
+                string strIp = string.Empty;
+                foreach(UnicastIPAddressInformation ip in Nic.GetIPProperties().UnicastAddresses)
+                {
+                    if (ip.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                    {
+                        strIp = ip.Address.ToString();
+                    }
+                }
+
+                return string.Format("{0} / {1}", Nic.Name, strIp);
+            }
+
+        }
 
     }
 }
