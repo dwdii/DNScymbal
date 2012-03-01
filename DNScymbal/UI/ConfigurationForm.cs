@@ -33,6 +33,7 @@ namespace DNScymbal
                 if (_config.RecordUpdateRequests.Count > 0)
                 {
                     RecordUpdateRequest theRur = _config.RecordUpdateRequests[0];
+                    _chkEnableDNSimple.Checked = theRur.Enabled;
                     _txtEmailAddr.Text = theRur.EmailAddress;
                     _txtPassword.Text = Str_PwordUnchanged;
                     _txtDomain.Text = theRur.Domain;
@@ -84,6 +85,7 @@ namespace DNScymbal
             {
                 RecordUpdateRequest theRur = _config.RecordUpdateRequests[0];
 
+                theRur.Enabled = _chkEnableDNSimple.Checked;
                 theRur.EmailAddress = _txtEmailAddr.Text;
                 if (_txtPassword.Text != Str_PwordUnchanged)
                 {
@@ -139,6 +141,29 @@ namespace DNScymbal
                 return string.Format("{0} / {1}", Nic.Name, strIp);
             }
 
+        }
+
+        private void _chkEnableDNSimple_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                EnableDNSimpleControls(_chkEnableDNSimple.Checked);
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex);
+            }
+        }
+
+        private void EnableDNSimpleControls(bool bEnable)
+        {
+            _cbIpAddress.Enabled = bEnable;
+            _txtDomain.Enabled = bEnable;
+            _txtEmailAddr.Enabled = bEnable;
+            _txtPassword.Enabled = bEnable;
+            _txtRecordId.Enabled = bEnable;
+            _txtRecordName.Enabled = bEnable;
+            _txtUpdateFreq.Enabled = bEnable;
         }
 
     }

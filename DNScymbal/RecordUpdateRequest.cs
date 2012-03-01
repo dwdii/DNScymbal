@@ -7,6 +7,7 @@ namespace DNScymbal
 {
     class RecordUpdateRequest
     {
+        public bool Enabled { get; set; }
         public string EmailAddress { get; set; }
         public string Password { get; set; }
         public string Domain { get; set; }

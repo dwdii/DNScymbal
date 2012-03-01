@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.tabDNSimple = new System.Windows.Forms.TabPage();
             this.tableGeneral = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -46,6 +46,8 @@
             this._txtRecordId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this._txtDomain = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this._cbIpAddress = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,10 +58,9 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this._btnOk = new System.Windows.Forms.Button();
             this._btnCancel = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this._cbIpAddress = new System.Windows.Forms.ComboBox();
+            this._chkEnableDNSimple = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
-            this.tabGeneral.SuspendLayout();
+            this.tabDNSimple.SuspendLayout();
             this.tableGeneral.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -74,25 +75,26 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabGeneral);
+            this.tabControl1.Controls.Add(this.tabDNSimple);
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.HotTrack = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
-            // tabGeneral
+            // tabDNSimple
             // 
-            this.tabGeneral.Controls.Add(this.tableGeneral);
-            resources.ApplyResources(this.tabGeneral, "tabGeneral");
-            this.tabGeneral.Name = "tabGeneral";
-            this.tabGeneral.UseVisualStyleBackColor = true;
+            this.tabDNSimple.Controls.Add(this.tableGeneral);
+            resources.ApplyResources(this.tabDNSimple, "tabDNSimple");
+            this.tabDNSimple.Name = "tabDNSimple";
+            this.tabDNSimple.UseVisualStyleBackColor = true;
             // 
             // tableGeneral
             // 
             resources.ApplyResources(this.tableGeneral, "tableGeneral");
-            this.tableGeneral.Controls.Add(this.groupBox1, 0, 0);
-            this.tableGeneral.Controls.Add(this.groupBox2, 0, 1);
-            this.tableGeneral.Controls.Add(this.groupBox3, 0, 2);
+            this.tableGeneral.Controls.Add(this.groupBox1, 0, 1);
+            this.tableGeneral.Controls.Add(this.groupBox2, 0, 2);
+            this.tableGeneral.Controls.Add(this.groupBox3, 0, 3);
+            this.tableGeneral.Controls.Add(this._chkEnableDNSimple, 0, 0);
             this.tableGeneral.Name = "tableGeneral";
             // 
             // groupBox1
@@ -182,6 +184,20 @@
             resources.ApplyResources(this._txtDomain, "_txtDomain");
             this._txtDomain.Name = "_txtDomain";
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // _cbIpAddress
+            // 
+            resources.ApplyResources(this._cbIpAddress, "_cbIpAddress");
+            this._cbIpAddress.DropDownHeight = 200;
+            this._cbIpAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this._cbIpAddress.DropDownWidth = 350;
+            this._cbIpAddress.FormattingEnabled = true;
+            this._cbIpAddress.Name = "_cbIpAddress";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel6);
@@ -246,19 +262,12 @@
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // _chkEnableDNSimple
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // _cbIpAddress
-            // 
-            resources.ApplyResources(this._cbIpAddress, "_cbIpAddress");
-            this._cbIpAddress.DropDownHeight = 200;
-            this._cbIpAddress.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this._cbIpAddress.DropDownWidth = 350;
-            this._cbIpAddress.FormattingEnabled = true;
-            this._cbIpAddress.Name = "_cbIpAddress";
+            resources.ApplyResources(this._chkEnableDNSimple, "_chkEnableDNSimple");
+            this._chkEnableDNSimple.Name = "_chkEnableDNSimple";
+            this._chkEnableDNSimple.UseVisualStyleBackColor = true;
+            this._chkEnableDNSimple.CheckedChanged += new System.EventHandler(this._chkEnableDNSimple_CheckedChanged);
             // 
             // ConfigurationForm
             // 
@@ -273,8 +282,9 @@
             this.Name = "ConfigurationForm";
             this.Load += new System.EventHandler(this.ConfigurationForm_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabGeneral.ResumeLayout(false);
+            this.tabDNSimple.ResumeLayout(false);
             this.tableGeneral.ResumeLayout(false);
+            this.tableGeneral.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -295,7 +305,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabGeneral;
+        private System.Windows.Forms.TabPage tabDNSimple;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableGeneral;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -323,5 +333,6 @@
         private System.Windows.Forms.TextBox _txtDomain;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox _cbIpAddress;
+        private System.Windows.Forms.CheckBox _chkEnableDNSimple;
     }
 }

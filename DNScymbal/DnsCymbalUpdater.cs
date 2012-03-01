@@ -89,7 +89,7 @@ namespace DNScymbal
 
         private static void HandleException(Exception ex)
         {
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(ex.Message, Properties.Resources.Str_DNSimpleUpdaterThread_MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public static string GetPublicIP()
