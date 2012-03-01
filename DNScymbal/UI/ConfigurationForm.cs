@@ -40,7 +40,9 @@ namespace DNScymbal
                     _txtRecordId.Text = theRur.RecordId.ToString();
                     _txtRecordName.Text = theRur.RecordName;
                     _txtUpdateFreq.Text = theRur.UpdateFrequencyMinutes.ToString();
+
                     LoadIpAddressCb(theRur);
+                    EnableDNSimpleControls(theRur.Enabled);
                 }
                 else
                 {

@@ -61,24 +61,29 @@ namespace DNScymbal
         {
             try
             {
-                rur.Validate();
-
-                // Check if it is time to update...
-                bool bUpdate = true;
-                if (rur.LastUpdated.HasValue)
+                // Is the update request enabled?
+                if (rur.Enabled)
                 {
-                    TimeSpan ts = DateTime.Now.Subtract(rur.LastUpdated.Value);
-                    bUpdate = ts.TotalMinutes >= rur.UpdateFrequencyMinutes;
-                }
+                    // Yes, so validate first
+                    rur.Validate();
 
-                // Update?
-                if (bUpdate)
-                {
-                    DNSimple.DNSimpleRestClient c = new DNSimpleRestClient(rur.EmailAddress, rur.Password);
+                    // Check if it is time to update...
+                    bool bUpdate = true;
+                    if (rur.LastUpdated.HasValue)
+                    {
+                        TimeSpan ts = DateTime.Now.Subtract(rur.LastUpdated.Value);
+                        bUpdate = ts.TotalMinutes >= rur.UpdateFrequencyMinutes;
+                    }
 
-                    rur.RecordContent = GetPublicIP();
-                    c.UpdateRecord(rur.Domain, rur.RecordId, rur.RecordName, rur.RecordContent);
-                    rur.LastUpdated = DateTime.Now;
+                    // Update?
+                    if (bUpdate)
+                    {
+                        DNSimple.DNSimpleRestClient c = new DNSimpleRestClient(rur.EmailAddress, rur.Password);
+
+                        rur.RecordContent = GetPublicIP();
+                        c.UpdateRecord(rur.Domain, rur.RecordId, rur.RecordName, rur.RecordContent);
+                        rur.LastUpdated = DateTime.Now;
+                    }
                 }
             }
             catch (Exception ex)
