@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using DNSimple;
 using System.Windows.Forms;
+using DNScymbal.Azure;
 
 namespace DNScymbal
 {
@@ -41,6 +42,11 @@ namespace DNScymbal
             try
             {
                 ConfigSettings configSettings = new ConfigSettings();
+
+                //SqlAzureRest sar = new SqlAzureRest();
+                //sar.ServerName = "rfu3pk0bka";
+                //sar.SubscriptionId = "9799e688-6fa7-4085-ab24-9b6d9233e2ad";
+                //sar.SetServerFirewallRuleWithIpDetect();
 
                 // Loop until we are stopping
                 while (!_stopEvent.WaitOne(1000))

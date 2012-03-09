@@ -77,6 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Azure\SqlAzureRest.cs" />
     <Compile Include="ConfigSettings.cs" />
     <Compile Include="DnsCymbalUpdater.cs" />
     <Compile Include="MainService.cs">

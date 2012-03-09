@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNScymbal", "DNScymbal\DNScymbal.csproj", "{CB131238-DD00-4CBF-B848-3584C7302A6B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DNScymbalSetup", "DNScymbalSetup\DNScymbalSetup.vdproj", "{28264CFA-F9D8-4690-9BA3-108CF71CF193}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,9 @@ Global
 		{CB131238-DD00-4CBF-B848-3584C7302A6B}.Debug|x86.Build.0 = Debug|x86
 		{CB131238-DD00-4CBF-B848-3584C7302A6B}.Release|x86.ActiveCfg = Release|x86
 		{CB131238-DD00-4CBF-B848-3584C7302A6B}.Release|x86.Build.0 = Release|x86
+		{28264CFA-F9D8-4690-9BA3-108CF71CF193}.Debug|x86.ActiveCfg = Debug
+		{28264CFA-F9D8-4690-9BA3-108CF71CF193}.Release|x86.ActiveCfg = Release
+		{28264CFA-F9D8-4690-9BA3-108CF71CF193}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
