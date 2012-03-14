@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Dittenhafer Solutions")]
 [assembly: AssemblyProduct("DNScymbal")]
-[assembly: AssemblyCopyright("Copyright © Dittenhafer Solutions 2012")]
+[assembly: AssemblyCopyright("Copyright © 2012 Daniel Dittenhafer")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
