@@ -1,6 +1,6 @@
 DNScymbal
 =========
-DNScymbal is a simple Windows tray app which updates DNSimple DNS record with your dynamic IP address. It uses a property sheet for configuration as shown below:
+DNScymbal is a simple Windows tray app which updates a DNSimple DNS record with your dynamic IP address. It uses a property sheet for configuration as shown below:
 
 ![DNScymbal Properties](/dwdii/DNScymbal/blob/master/readme/DnsCymbalProperties.png?raw=true "DNScymbal Properties")
 

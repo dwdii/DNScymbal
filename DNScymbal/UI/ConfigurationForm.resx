@@ -196,7 +196,7 @@
     <value>196, 20</value>
   </data>
   <data name="_txtEmailAddr.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;_txtEmailAddr.Name" xml:space="preserve">
     <value>_txtEmailAddr</value>
@@ -220,7 +220,7 @@
     <value>196, 20</value>
   </data>
   <data name="_txtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;_txtPassword.Name" xml:space="preserve">
     <value>_txtPassword</value>
@@ -388,7 +388,7 @@
     <value>196, 20</value>
   </data>
   <data name="_txtRecordId.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;_txtRecordId.Name" xml:space="preserve">
     <value>_txtRecordId</value>
@@ -442,7 +442,7 @@
     <value>196, 20</value>
   </data>
   <data name="_txtDomain.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;_txtDomain.Name" xml:space="preserve">
     <value>_txtDomain</value>
@@ -499,7 +499,7 @@
     <value>196, 21</value>
   </data>
   <data name="_cbIpAddress.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;_cbIpAddress.Name" xml:space="preserve">
     <value>_cbIpAddress</value>
@@ -583,7 +583,7 @@
     <value>94, 20</value>
   </data>
   <data name="_txtUpdateFreq.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;_txtUpdateFreq.Name" xml:space="preserve">
     <value>_txtUpdateFreq</value>
@@ -754,7 +754,7 @@
     <value>156, 17</value>
   </data>
   <data name="_chkEnableDNSimple.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="_chkEnableDNSimple.Text" xml:space="preserve">
     <value>DNSimple Updater Enabled</value>
@@ -781,7 +781,7 @@
     <value>293, 17</value>
   </data>
   <data name="_chkAutoStartApp.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="_chkAutoStartApp.Text" xml:space="preserve">
     <value>Automatically start DNScymbal when I logon to Windows</value>
