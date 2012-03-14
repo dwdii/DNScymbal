@@ -2,21 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace DNScymbal
 {
-    class RecordUpdateRequest
+    public class RecordUpdateRequest
     {
         public bool Enabled { get; set; }
         public string EmailAddress { get; set; }
-        public string Password { get; set; }
+
+        /// <summary>
+        /// Gets or sets the clear text password associated with the DNS host account.
+        /// </summary>
+        [XmlIgnore]
+        public string Password 
+        {
+            get
+            {
+                return DNScymbalSettings.ConvertFromBase64(this.Password64);
+            }
+
+            set
+            {
+                this.Password64 = DNScymbalSettings.ConvertToBase64(value);
+            }
+        }
+        public string Password64 { get; set; }
         public string Domain { get; set; }
         public int RecordId { get; set; }
         public string RecordContent { get; set; }
         public string RecordName { get; set; }
         public int UpdateFrequencyMinutes { get; set; }
-        public DateTime? LastUpdated { get; set; }
         public string IpAddressType { get; set; }
+
+        [XmlIgnore]
+        public DateTime? LastUpdated { get; set; }
 
         /// <summary>
         /// Performs a cursory validation of this record update request.

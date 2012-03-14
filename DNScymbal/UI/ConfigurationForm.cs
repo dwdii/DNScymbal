@@ -15,7 +15,7 @@ namespace DNScymbal
     {
         const string Str_PwordUnchanged = "PASSWORD_UNCHANGED";
 
-        ConfigSettings _config = new ConfigSettings();
+        DNScymbalSettings _config = DNScymbalSettings.Load();
 
         public ConfigurationForm()
         {
@@ -26,8 +26,7 @@ namespace DNScymbal
         {
             try
             {
-                
-
+                _chkAutoStartApp.Checked = _config.AutoStartApplication;
 
                 // Show the config we currently have...
                 if (_config.RecordUpdateRequests.Count > 0)
@@ -85,7 +84,17 @@ namespace DNScymbal
         {
             try
             {
-                RecordUpdateRequest theRur = _config.RecordUpdateRequests[0];
+
+                RecordUpdateRequest theRur;
+                if (0 < _config.RecordUpdateRequests.Count)
+                {
+                    theRur = _config.RecordUpdateRequests[0];
+                }
+                else
+                {
+                    theRur = new RecordUpdateRequest();
+                    _config.RecordUpdateRequests.Add(theRur);
+                }
 
                 theRur.Enabled = _chkEnableDNSimple.Checked;
                 theRur.EmailAddress = _txtEmailAddr.Text;
@@ -97,6 +106,8 @@ namespace DNScymbal
                 theRur.RecordId = Convert.ToInt32(_txtRecordId.Text);
                 theRur.RecordName = _txtRecordName.Text;
                 theRur.UpdateFrequencyMinutes = Convert.ToInt32(_txtUpdateFreq.Text);
+
+                _config.AutoStartApplication = _chkAutoStartApp.Checked;
 
                 // Save the config
                 _config.Save();

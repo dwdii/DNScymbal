@@ -54,11 +54,12 @@
             this._txtUpdateFreq = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this._chkEnableDNSimple = new System.Windows.Forms.CheckBox();
+            this._chkAutoStartApp = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this._btnOk = new System.Windows.Forms.Button();
             this._btnCancel = new System.Windows.Forms.Button();
-            this._chkEnableDNSimple = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabDNSimple.SuspendLayout();
             this.tableGeneral.SuspendLayout();
@@ -91,10 +92,11 @@
             // tableGeneral
             // 
             resources.ApplyResources(this.tableGeneral, "tableGeneral");
-            this.tableGeneral.Controls.Add(this.groupBox1, 0, 1);
-            this.tableGeneral.Controls.Add(this.groupBox2, 0, 2);
-            this.tableGeneral.Controls.Add(this.groupBox3, 0, 3);
-            this.tableGeneral.Controls.Add(this._chkEnableDNSimple, 0, 0);
+            this.tableGeneral.Controls.Add(this.groupBox1, 0, 2);
+            this.tableGeneral.Controls.Add(this.groupBox2, 0, 3);
+            this.tableGeneral.Controls.Add(this.groupBox3, 0, 4);
+            this.tableGeneral.Controls.Add(this._chkEnableDNSimple, 0, 1);
+            this.tableGeneral.Controls.Add(this._chkAutoStartApp, 0, 0);
             this.tableGeneral.Name = "tableGeneral";
             // 
             // groupBox1
@@ -234,6 +236,19 @@
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
+            // _chkEnableDNSimple
+            // 
+            resources.ApplyResources(this._chkEnableDNSimple, "_chkEnableDNSimple");
+            this._chkEnableDNSimple.Name = "_chkEnableDNSimple";
+            this._chkEnableDNSimple.UseVisualStyleBackColor = true;
+            this._chkEnableDNSimple.CheckedChanged += new System.EventHandler(this._chkEnableDNSimple_CheckedChanged);
+            // 
+            // _chkAutoStartApp
+            // 
+            resources.ApplyResources(this._chkAutoStartApp, "_chkAutoStartApp");
+            this._chkAutoStartApp.Name = "_chkAutoStartApp";
+            this._chkAutoStartApp.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
@@ -261,13 +276,6 @@
             resources.ApplyResources(this._btnCancel, "_btnCancel");
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // _chkEnableDNSimple
-            // 
-            resources.ApplyResources(this._chkEnableDNSimple, "_chkEnableDNSimple");
-            this._chkEnableDNSimple.Name = "_chkEnableDNSimple";
-            this._chkEnableDNSimple.UseVisualStyleBackColor = true;
-            this._chkEnableDNSimple.CheckedChanged += new System.EventHandler(this._chkEnableDNSimple_CheckedChanged);
             // 
             // ConfigurationForm
             // 
@@ -334,5 +342,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox _cbIpAddress;
         private System.Windows.Forms.CheckBox _chkEnableDNSimple;
+        private System.Windows.Forms.CheckBox _chkAutoStartApp;
     }
 }

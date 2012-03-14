@@ -193,7 +193,7 @@
     <value>109, 3</value>
   </data>
   <data name="_txtEmailAddr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 20</value>
+    <value>196, 20</value>
   </data>
   <data name="_txtEmailAddr.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -217,7 +217,7 @@
     <value>109, 33</value>
   </data>
   <data name="_txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 20</value>
+    <value>196, 20</value>
   </data>
   <data name="_txtPassword.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -244,7 +244,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 65</value>
+    <value>308, 65</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -268,10 +268,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 33</value>
+    <value>3, 63</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 84</value>
+    <value>314, 84</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -331,7 +331,7 @@
     <value>109, 63</value>
   </data>
   <data name="_txtRecordName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 20</value>
+    <value>196, 20</value>
   </data>
   <data name="_txtRecordName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -385,7 +385,7 @@
     <value>109, 33</value>
   </data>
   <data name="_txtRecordId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 20</value>
+    <value>196, 20</value>
   </data>
   <data name="_txtRecordId.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -439,7 +439,7 @@
     <value>109, 3</value>
   </data>
   <data name="_txtDomain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 20</value>
+    <value>196, 20</value>
   </data>
   <data name="_txtDomain.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -496,7 +496,7 @@
     <value>109, 93</value>
   </data>
   <data name="_cbIpAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 21</value>
+    <value>196, 21</value>
   </data>
   <data name="_cbIpAddress.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -523,7 +523,7 @@
     <value>4</value>
   </data>
   <data name="tableDnsRecord.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 125</value>
+    <value>308, 125</value>
   </data>
   <data name="tableDnsRecord.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -547,10 +547,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 123</value>
+    <value>3, 153</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 144</value>
+    <value>314, 144</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -697,7 +697,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 67</value>
+    <value>308, 37</value>
   </data>
   <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -721,10 +721,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 273</value>
+    <value>3, 303</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 86</value>
+    <value>314, 56</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -748,7 +748,7 @@
     <value>True</value>
   </data>
   <data name="_chkEnableDNSimple.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 33</value>
   </data>
   <data name="_chkEnableDNSimple.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 17</value>
@@ -771,6 +771,33 @@
   <data name="&gt;&gt;_chkEnableDNSimple.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="_chkAutoStartApp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_chkAutoStartApp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="_chkAutoStartApp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 17</value>
+  </data>
+  <data name="_chkAutoStartApp.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="_chkAutoStartApp.Text" xml:space="preserve">
+    <value>Automatically start DNScymbal when I logon to Windows</value>
+  </data>
+  <data name="&gt;&gt;_chkAutoStartApp.Name" xml:space="preserve">
+    <value>_chkAutoStartApp</value>
+  </data>
+  <data name="&gt;&gt;_chkAutoStartApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_chkAutoStartApp.Parent" xml:space="preserve">
+    <value>tableGeneral</value>
+  </data>
+  <data name="&gt;&gt;_chkAutoStartApp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="tableGeneral.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -778,10 +805,10 @@
     <value>3, 3</value>
   </data>
   <data name="tableGeneral.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tableGeneral.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 362</value>
+    <value>320, 362</value>
   </data>
   <data name="tableGeneral.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -799,7 +826,7 @@
     <value>0</value>
   </data>
   <data name="tableGeneral.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkEnableDNSimple" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,30,Absolute,90,Absolute,150,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBox1" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkEnableDNSimple" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkAutoStartApp" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,90,Absolute,150,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabDNSimple.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -808,13 +835,13 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabDNSimple.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 368</value>
+    <value>326, 368</value>
   </data>
   <data name="tabDNSimple.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="tabDNSimple.Text" xml:space="preserve">
-    <value>DNSimple</value>
+    <value>General</value>
   </data>
   <data name="&gt;&gt;tabDNSimple.Name" xml:space="preserve">
     <value>tabDNSimple</value>
@@ -835,7 +862,7 @@
     <value>3, 3</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>313, 394</value>
+    <value>334, 394</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -910,7 +937,7 @@
     <value>Right</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 403</value>
+    <value>172, 403</value>
   </data>
   <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -946,7 +973,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>319, 435</value>
+    <value>340, 435</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -973,7 +1000,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>319, 435</value>
+    <value>340, 435</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

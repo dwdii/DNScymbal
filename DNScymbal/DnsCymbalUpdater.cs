@@ -41,7 +41,7 @@ namespace DNScymbal
         {
             try
             {
-                ConfigSettings configSettings = new ConfigSettings();
+                DNScymbalSettings configSettings = DNScymbalSettings.Load();
 
                 //SqlAzureRest sar = new SqlAzureRest();
                 //sar.ServerName = "rfu3pk0bka";
