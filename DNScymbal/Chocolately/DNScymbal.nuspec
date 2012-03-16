@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>DNScymbal</id>
+		<title>DNScymbal</title>
+		<version>1.0</version>
+		<authors>Daniel Dittenhafer</authors>
+		<owners>Daniel Dittenhafer</owners>
+		<summary>Dynamic IP Record Updater for DNSimple registered domains</summary>
+		<description>DNScymbal provides dynamic DNS support for DNSimple managed domains.</description>
+		<projectUrl>http://github.com/dwdii/DNScymbal</projectUrl>
+		<tags>DNSimple admin</tags>
+		<copyright>Copyright (c) 2012 Daniel Dittenhafer</copyright>
+		<licenseUrl>https://github.com/dwdii/DNScymbal/blob/master/LICENSE.txt</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<!--<iconUrl>https://github.com/dwdii/DNScymbal/raw/master/__NAME__/__NAME__.gif</iconUrl>-->
+		<!--<dependencies>      
+      <dependency id="" version="" />
+    </dependencies>-->
+		<releaseNotes></releaseNotes>
+	</metadata>
+</package> 

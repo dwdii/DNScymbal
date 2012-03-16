@@ -116,6 +116,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -375,7 +388,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DNScymbal"
         "ProductCode" = "8:{96F9C5A8-2E08-47E4-B9C3-60E964E366F7}"
-        "PackageCode" = "8:{9FD301DE-0429-4E62-833A-AF515080049C}"
+        "PackageCode" = "8:{EB98616B-5CB0-49EC-983F-4E45F265F4CD}"
         "UpgradeCode" = "8:{7937AB62-30BB-441A-BC97-B3D3CFBD92FA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -391,7 +404,7 @@
         "ARPCONTACT" = "8:Dittenhafer Solutions"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:https://github.com/dwdii"
         "ARPPRODUCTICON" = "8:_0B930249F3BF4E22A38D4D9BBAD3A748"
         "ARPIconIndex" = "3:32512"
         "SearchPath" = "8:"
@@ -910,7 +923,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0B930249F3BF4E22A38D4D9BBAD3A748"
             {
-            "SourcePath" = "8:..\\DNScymbal\\obj\\x86\\Release\\DNScymbal.exe"
+            "SourcePath" = "8:..\\DNScymbal\\obj\\x86\\Debug\\DNScymbal.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_757E77C90BD2411EB5CA644B4686522A"

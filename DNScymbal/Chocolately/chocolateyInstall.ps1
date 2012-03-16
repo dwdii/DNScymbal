@@ -1,0 +1,1 @@
+﻿Install-ChocolateyPackage 'DNScymbal' 'msi' '/quiet' 'URL'
