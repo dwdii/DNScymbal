@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigurationForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDNSimple = new System.Windows.Forms.TabPage();
@@ -60,6 +61,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this._btnOk = new System.Windows.Forms.Button();
             this._btnCancel = new System.Windows.Forms.Button();
+            this._toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabDNSimple.SuspendLayout();
             this.tableGeneral.SuspendLayout();
@@ -343,5 +345,6 @@
         private System.Windows.Forms.ComboBox _cbIpAddress;
         private System.Windows.Forms.CheckBox _chkEnableDNSimple;
         private System.Windows.Forms.CheckBox _chkAutoStartApp;
+        private System.Windows.Forms.ToolTip _toolTip;
     }
 }

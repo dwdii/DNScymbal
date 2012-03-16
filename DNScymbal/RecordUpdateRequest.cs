@@ -33,7 +33,18 @@ namespace DNScymbal
         public string RecordContent { get; set; }
         public string RecordName { get; set; }
         public int UpdateFrequencyMinutes { get; set; }
-        public string IpAddressType { get; set; }
+
+        /// <summary>
+        /// Current always returns the value of <see cref="IpAddressTypes.JsonIp"/>
+        /// </summary>
+        public string IpAddressType 
+        {
+            get
+            {
+                return IpAddressTypes.JsonIp;
+            }
+            set { } 
+        }
 
         [XmlIgnore]
         public DateTime? LastUpdated { get; set; }

@@ -77,6 +77,7 @@ namespace DNScymbal
             if (null != theRur && theRur.IpAddressType == RecordUpdateRequest.IpAddressTypes.JsonIp)
             {
                 _cbIpAddress.SelectedItem = strJsonIp;
+                _toolTip.SetToolTip(_cbIpAddress, strJsonIp);
             }
         }
 
@@ -170,7 +171,7 @@ namespace DNScymbal
 
         private void EnableDNSimpleControls(bool bEnable)
         {
-            _cbIpAddress.Enabled = bEnable;
+            _cbIpAddress.Enabled = false;
             _txtDomain.Enabled = bEnable;
             _txtEmailAddr.Enabled = bEnable;
             _txtPassword.Enabled = bEnable;
