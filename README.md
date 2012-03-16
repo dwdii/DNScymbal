@@ -38,7 +38,9 @@ The .Net Framework v4 Client Profile is required.
 
 Testing
 =======
-Only lite manual testing on Windows 7 Home Premium has been performed. Please submit any enhancements or issues via [this repo's Issue Tracking](https://github.com/dwd/DNScymbal/issues)
+Only lite manual testing on Windows 7 Home Premium has been performed. 
+
+Please submit enhancements and issues via [this repo's issue tracking page](https://github.com/dwdii/DNScymbal/issues)
 
 License
 =======
