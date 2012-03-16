@@ -159,7 +159,7 @@ namespace DNScymbal
         {
             get
             {
-                string strPath = Path.GetDirectoryName(System.Windows.Forms.Application.LocalUserAppDataPath);
+                string strPath = Path.GetDirectoryName(System.Windows.Forms.Application.CommonAppDataPath);
                 string strSettingsFile = Path.Combine(strPath, Str_Filename);
                 return strSettingsFile;
             }
