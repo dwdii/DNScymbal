@@ -387,15 +387,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DNScymbal"
-        "ProductCode" = "8:{96F9C5A8-2E08-47E4-B9C3-60E964E366F7}"
-        "PackageCode" = "8:{EB98616B-5CB0-49EC-983F-4E45F265F4CD}"
+        "ProductCode" = "8:{521C0551-A3D0-4F70-85D8-AB5B71D815D3}"
+        "PackageCode" = "8:{FC063CAB-9E84-49E2-A5AC-5440E6644C77}"
         "UpgradeCode" = "8:{7937AB62-30BB-441A-BC97-B3D3CFBD92FA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4464"
         "Manufacturer" = "8:Dittenhafer Solutions"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/dwdii/DNScymbal"
@@ -923,7 +923,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0B930249F3BF4E22A38D4D9BBAD3A748"
             {
-            "SourcePath" = "8:..\\DNScymbal\\obj\\x86\\Debug\\DNScymbal.exe"
+            "SourcePath" = "8:..\\DNScymbal\\obj\\x86\\Release\\DNScymbal.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_757E77C90BD2411EB5CA644B4686522A"

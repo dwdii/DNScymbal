@@ -1,6 +1,18 @@
 DNScymbal
 =========
-DNScymbal is a simple Windows tray app which updates a DNSimple DNS record with your dynamic IP address. It uses a property sheet for configuration as shown below:
+DNScymbal is a simple Windows tray app which updates a DNSimple DNS record with your dynamic IP address. 
+
+How to Get DNScymbal
+====================
+[Download the latest version of DNScymbal (1.0.4464)](http://www.dittenhafer.net/DNScymbal/DNScymbalSetup.msi)
+
+Alternatively, fork the DNScymbal repo and, build the solution yourself and start adding new functionality! 
+
+I anticipate publishing a [Chocolatey.org](http://chocolatey.org/) package at some point, but unfortunately don't have a timeline for this yet.
+
+How to Use DNScymbal
+====================
+It uses a property sheet for configuration as shown below:
 
 ![DNScymbal Properties](/dwdii/DNScymbal/blob/master/readme/DnsCymbalProperties.png?raw=true "DNScymbal Properties")
 
@@ -20,12 +32,6 @@ Use the DNSimple web interface to create the initial "A" record and then allow t
 
 The DNScymbal app will automatically use the [jsonip.com](http://jsonip.com/) service to get your public IP address
 and post this IP to the specified record on the specified domain.
-
-How to Get DNScymbal
-====================
-Currently the only way to have DNScymbal running on your computer is to use Git to fork this repository and build the solution yourself. 
-
-With that said, a [Chocolatey.org](http://chocolatey.org/) package is in the works and a link to the package page will appear here once the app has been published.
 
 Development Environment
 =======================
