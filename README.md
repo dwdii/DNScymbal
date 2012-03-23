@@ -6,13 +6,13 @@ How to Get DNScymbal
 ====================
 [Download the latest version of DNScymbal (1.0.4464)](http://www.dittenhafer.net/downloads/DNScymbal/DNScymbalSetup.msi)
 
-Alternatively, fork the DNScymbal repo and, build the solution yourself and start adding new functionality! 
+Alternatively, fork the DNScymbal repo, build the solution yourself and start adding new functionality! 
 
 I anticipate publishing a [Chocolatey.org](http://chocolatey.org/) package at some point, but unfortunately don't have a timeline for this yet.
 
 How to Use DNScymbal
 ====================
-It uses a property sheet for configuration as shown below:
+DNScymbal uses a property sheet for configuration as shown below:
 
 ![DNScymbal Properties](/dwdii/DNScymbal/blob/master/readme/DnsCymbalProperties.png?raw=true "DNScymbal Properties")
 
