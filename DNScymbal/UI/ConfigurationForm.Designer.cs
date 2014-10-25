@@ -62,6 +62,7 @@
             this._btnOk = new System.Windows.Forms.Button();
             this._btnCancel = new System.Windows.Forms.Button();
             this._toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this._chkIsApiToken = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabDNSimple.SuspendLayout();
             this.tableGeneral.SuspendLayout();
@@ -115,6 +116,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this._txtEmailAddr, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this._txtPassword, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this._chkIsApiToken, 1, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
             // label1
@@ -279,6 +281,12 @@
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.UseVisualStyleBackColor = true;
             // 
+            // _chkIsApiToken
+            // 
+            resources.ApplyResources(this._chkIsApiToken, "_chkIsApiToken");
+            this._chkIsApiToken.Name = "_chkIsApiToken";
+            this._chkIsApiToken.UseVisualStyleBackColor = true;
+            // 
             // ConfigurationForm
             // 
             this.AcceptButton = this._btnOk;
@@ -346,5 +354,6 @@
         private System.Windows.Forms.CheckBox _chkEnableDNSimple;
         private System.Windows.Forms.CheckBox _chkAutoStartApp;
         private System.Windows.Forms.ToolTip _toolTip;
+        private System.Windows.Forms.CheckBox _chkIsApiToken;
     }
 }

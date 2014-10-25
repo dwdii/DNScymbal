@@ -70,13 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_17066E7242B081956E7B22D7CA9E5C93"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_41A85FA7B819C7FBCE9DB563FCDE53AC"
+        "OwnerKey" = "8:_CAEBD6C5D2A2DFA4EA7495375BFED279"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CAEBD6C5D2A2DFA4EA7495375BFED279"
+        "OwnerKey" = "8:_41A85FA7B819C7FBCE9DB563FCDE53AC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_17066E7242B081956E7B22D7CA9E5C93"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -203,11 +203,6 @@
             "AssemblyAsmDisplayName" = "8:DNSimple.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_17066E7242B081956E7B22D7CA9E5C93"
-                    {
-                    "Name" = "8:DNSimple.Api.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:DNSimple.Api.dll"
             "TargetName" = "8:"
@@ -234,11 +229,6 @@
             "AssemblyAsmDisplayName" = "8:RestSharp, Version=102.5.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_41A85FA7B819C7FBCE9DB563FCDE53AC"
-                    {
-                    "Name" = "8:RestSharp.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:RestSharp.dll"
             "TargetName" = "8:"
@@ -265,11 +255,6 @@
             "AssemblyAsmDisplayName" = "8:JsonFx, Version=2.0.1106.2610, Culture=neutral, PublicKeyToken=315052dd637f8a52, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CAEBD6C5D2A2DFA4EA7495375BFED279"
-                    {
-                    "Name" = "8:JsonFx.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:JsonFx.dll"
             "TargetName" = "8:"
@@ -296,11 +281,6 @@
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=4.0.5.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_FF1DAF770868965D82556C62AE36706C"
-                    {
-                    "Name" = "8:Newtonsoft.Json.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
@@ -387,15 +367,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:DNScymbal"
-        "ProductCode" = "8:{521C0551-A3D0-4F70-85D8-AB5B71D815D3}"
-        "PackageCode" = "8:{FC063CAB-9E84-49E2-A5AC-5440E6644C77}"
+        "ProductCode" = "8:{2E272F75-5236-4C52-97BB-9FC363AD4B59}"
+        "PackageCode" = "8:{06386156-2F2F-4889-9343-EE10E12CB92C}"
         "UpgradeCode" = "8:{7937AB62-30BB-441A-BC97-B3D3CFBD92FA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.4464"
+        "ProductVersion" = "8:1.1.5410"
         "Manufacturer" = "8:Dittenhafer Solutions"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/dwdii/DNScymbal"

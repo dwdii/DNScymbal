@@ -159,6 +159,9 @@
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 36</value>
   </data>
@@ -166,13 +169,13 @@
     <value>3, 6, 3, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+    <value>119, 24</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Password:</value>
+    <value>Password / API Token:</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -190,10 +193,10 @@
     <value>Fill</value>
   </data>
   <data name="_txtEmailAddr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 3</value>
+    <value>128, 3</value>
   </data>
   <data name="_txtEmailAddr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 20</value>
+    <value>177, 20</value>
   </data>
   <data name="_txtEmailAddr.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -214,10 +217,10 @@
     <value>Fill</value>
   </data>
   <data name="_txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 33</value>
+    <value>128, 33</value>
   </data>
   <data name="_txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 20</value>
+    <value>177, 20</value>
   </data>
   <data name="_txtPassword.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -234,6 +237,33 @@
   <data name="&gt;&gt;_txtPassword.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="_chkIsApiToken.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="_chkIsApiToken.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 63</value>
+  </data>
+  <data name="_chkIsApiToken.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 17</value>
+  </data>
+  <data name="_chkIsApiToken.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_chkIsApiToken.Text" xml:space="preserve">
+    <value>Is API Token</value>
+  </data>
+  <data name="&gt;&gt;_chkIsApiToken.Name" xml:space="preserve">
+    <value>_chkIsApiToken</value>
+  </data>
+  <data name="&gt;&gt;_chkIsApiToken.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_chkIsApiToken.Parent" xml:space="preserve">
+    <value>tableLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;_chkIsApiToken.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="tableLayoutPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -244,7 +274,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 65</value>
+    <value>308, 85</value>
   </data>
   <data name="tableLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -262,7 +292,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel4.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_txtEmailAddr" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_txtPassword" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,106,Percent,100" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_txtEmailAddr" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_txtPassword" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="_chkIsApiToken" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,125,Percent,100" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="groupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -271,7 +301,7 @@
     <value>3, 63</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 84</value>
+    <value>314, 104</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -547,7 +577,7 @@
     <value>Fill</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 153</value>
+    <value>3, 173</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 144</value>
@@ -697,7 +727,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 37</value>
+    <value>308, 67</value>
   </data>
   <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -721,10 +751,10 @@
     <value>Fill</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 303</value>
+    <value>3, 323</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 56</value>
+    <value>314, 86</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -808,7 +838,7 @@
     <value>5</value>
   </data>
   <data name="tableGeneral.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 362</value>
+    <value>320, 412</value>
   </data>
   <data name="tableGeneral.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -826,7 +856,7 @@
     <value>0</value>
   </data>
   <data name="tableGeneral.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBox1" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkEnableDNSimple" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkAutoStartApp" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,90,Absolute,150,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBox1" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkEnableDNSimple" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="_chkAutoStartApp" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,30,Absolute,30,Absolute,110,Absolute,150,Absolute,30" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabDNSimple.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -835,7 +865,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabDNSimple.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 368</value>
+    <value>326, 418</value>
   </data>
   <data name="tabDNSimple.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -862,7 +892,7 @@
     <value>3, 3</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 394</value>
+    <value>334, 444</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -937,7 +967,7 @@
     <value>Right</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 403</value>
+    <value>172, 453</value>
   </data>
   <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -973,7 +1003,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 435</value>
+    <value>340, 483</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -991,7 +1021,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tabControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel3" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="Absolute,400,Absolute,40" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tabControl1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel3" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="AutoSize,0" /&gt;&lt;Rows Styles="Absolute,450,Absolute,40" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="_toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -1003,7 +1033,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>340, 435</value>
+    <value>340, 483</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

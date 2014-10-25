@@ -30,7 +30,7 @@ namespace DNScymbal.Azure
             request.AddHeader("x-ms-version", "1.0");
 
             // execute the request
-            RestResponse response = _rc.Execute(request);
+            IRestResponse response = _rc.Execute(request);
             var content = response.Content; // raw content as string
 
         }

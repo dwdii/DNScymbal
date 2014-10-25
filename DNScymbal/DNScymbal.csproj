@@ -52,17 +52,18 @@
     <ApplicationIcon>Resources\DNScymbal.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DNSimple.Api">
-      <HintPath>..\packages\DNSimple.0.2\lib\4.0\DNSimple.Api.dll</HintPath>
+    <Reference Include="DNSimple.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DNSimple.0.5.0\lib\4.0\DNSimple.Api.dll</HintPath>
     </Reference>
-    <Reference Include="JsonFx">
-      <HintPath>..\packages\DNSimple.0.2\lib\4.0\JsonFx.dll</HintPath>
+    <Reference Include="JsonFx, Version=2.0.1106.2610, Culture=neutral, PublicKeyToken=315052dd637f8a52, processorArchitecture=MSIL">
+      <HintPath>..\packages\DNSimple.0.5.0\lib\4.0\JsonFx.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\DNSimple.0.2\lib\4.0\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.0.5\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\packages\DNSimple.0.2\lib\4.0\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=104.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RestSharp.102.6\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

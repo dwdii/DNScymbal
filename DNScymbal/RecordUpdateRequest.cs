@@ -27,6 +27,7 @@ namespace DNScymbal
                 this.Password64 = DNScymbalSettings.ConvertToBase64(value);
             }
         }
+        public bool IsApiToken { get; set; }
         public string Password64 { get; set; }
         public string Domain { get; set; }
         public int RecordId { get; set; }

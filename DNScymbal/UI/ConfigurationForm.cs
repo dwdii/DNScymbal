@@ -35,6 +35,7 @@ namespace DNScymbal
                     _chkEnableDNSimple.Checked = theRur.Enabled;
                     _txtEmailAddr.Text = theRur.EmailAddress;
                     _txtPassword.Text = Str_PwordUnchanged;
+                    _chkIsApiToken.Checked = theRur.IsApiToken;
                     _txtDomain.Text = theRur.Domain;
                     _txtRecordId.Text = theRur.RecordId.ToString();
                     _txtRecordName.Text = theRur.RecordName;
@@ -103,6 +104,7 @@ namespace DNScymbal
                 {
                     theRur.Password = _txtPassword.Text;
                 }
+                theRur.IsApiToken = _chkIsApiToken.Checked;
                 theRur.Domain = _txtDomain.Text;
                 theRur.RecordId = Convert.ToInt32(_txtRecordId.Text);
                 theRur.RecordName = _txtRecordName.Text;

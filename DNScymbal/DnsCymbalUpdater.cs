@@ -84,10 +84,21 @@ namespace DNScymbal
                     // Update?
                     if (bUpdate)
                     {
-                        DNSimple.DNSimpleRestClient c = new DNSimpleRestClient(rur.EmailAddress, rur.Password);
+                        string pwd = null;
+                        string tok = null;
+                        if(rur.IsApiToken)
+                        {
+                            tok = rur.Password;
+                        }
+                        else
+                        {
+                            pwd = rur.Password;
+                        }
+
+                        DNSimple.DNSimpleRestClient c = new DNSimpleRestClient(rur.EmailAddress, pwd, tok);
 
                         rur.RecordContent = GetPublicIP();
-                        c.UpdateRecord(rur.Domain, rur.RecordId, rur.RecordName, rur.RecordContent);
+                        dynamic ret = c.UpdateRecord(rur.Domain, rur.RecordId, rur.RecordName, rur.RecordContent);
                         rur.LastUpdated = DateTime.Now;
                     }
                 }
