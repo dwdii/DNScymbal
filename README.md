@@ -14,7 +14,7 @@ How to Use DNScymbal
 ====================
 DNScymbal uses a property sheet for configuration as shown below:
 
-![DNScymbal Properties](/dwdii/DNScymbal/blob/master/readme/DnsCymbalProperties.png?raw=true "DNScymbal Properties")
+![DNScymbal Properties](https://raw.github.com/dwdii/DNScymbal/master/readme/DnsCymbalProperties.png "DNScymbal Properties")
 
     EmailAddress: your DNSimple email address
 
