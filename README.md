@@ -4,6 +4,10 @@ DNScymbal is a simple Windows tray app which updates a DNSimple DNS record with 
 
 How to Get DNScymbal
 ====================
+
+[![Current release](https://img.shields.io/github/release/dwdii/DNScymbal.svg)](https://github.com/dwdii/DNScymbal/releases/tag/v1.1.5410)
+
+
 [Download the latest version of DNScymbal (1.1.5410)](http://www.dittenhafer.net/downloads/DNScymbal/DNScymbalSetup-1.1.5410.msi) - Released Oct 24, 2014
 
 For those who are upgrading from the previous version 1.0.4464, please uninstall the prior version before installing the new version.
