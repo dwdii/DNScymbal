@@ -1,6 +1,10 @@
 DNScymbal
 =========
+[![License](https://img.shields.io/badge/license-MIT-red.svg)](http://opensource.org/licenses/MIT)
+
+
 DNScymbal is a simple Windows tray app which updates a DNSimple DNS record with your dynamic IP address. 
+
 
 How to Get DNScymbal
 ====================
