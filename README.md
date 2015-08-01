@@ -56,7 +56,8 @@ The .Net Framework v4 Client Profile is required.
 
 Testing
 =======
-Only lite manual testing on Windows 7 Professional has been performed. 
+Lite manual testing on Windows 7 Professional has been performed during initial development. 
+More recently, the app has been running on Windows 10 Professional (upgraded from Windows 7) successfully.
 
 Please submit enhancements and issues via [this repo's issue tracking page](https://github.com/dwdii/DNScymbal/issues)
 
